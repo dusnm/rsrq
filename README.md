@@ -40,3 +40,33 @@ queue.pop('list-name')
     .then(result => console.log(result))
     .catch(err => console.error(err));
 ```
+
+### Run tests
+Clone the repository
+```shell
+git clone https://github.com/dusnm/rsrq.git && cd rsrq
+```
+Install dependencies
+```shell
+npm install
+```
+Run the tests with npm
+```shell
+npm run test
+```
+
+All tests should pass
+```
+Promisifier test
+    testPromisifyMethodByReflection
+      ✓ should promisify a callback based method by reflection
+      ✓ should return null when a method does not exist on the target
+
+  RedisQueue test
+    testPeek
+      ✓ should return the value of the first key on successive calls
+    testPush
+      ✓ should append an item to the end of the list
+    testPop
+      ✓ should delete the value of the first key and return it
+```

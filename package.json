@@ -2,17 +2,18 @@
   "name": "rsrq",
   "version": "1.0.0",
   "description": "A really simple queue implementation using redis rpush, lpop, lindex commands.",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/dusnm/rsrq.git"
+  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rm -rf ./lib/ && tsc"
+    "build": "rm -rf ./lib/ && tsc",
+    "test": "mocha --require ts-node/register tests/**/*.ts",
+    "prepublish": "npm run test && npm run build"
   },
-  "keywords": [
-    "queue",
-    "redis",
-    "simple",
-    "small"
-  ],
+  "keywords": ["queue", "redis", "simple", "small"],
   "author": "Dusan Mitrovic <dusan@dusanmitrovic.xyz>",
   "license": "LGPL-3.0-only",
   "devDependencies": {
