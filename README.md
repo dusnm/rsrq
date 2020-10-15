@@ -33,7 +33,7 @@ queue.push('list-name', JSON.stringify({
 // peek
 queue.peek('list-name')
      .then(result => console.log(result))
-     .catch(err =>  console.erro(err));
+     .catch(err =>  console.error(err));
 
 // pop
 queue.pop('list-name')
